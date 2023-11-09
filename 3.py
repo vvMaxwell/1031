@@ -1,11 +1,34 @@
-import main
+def add(first_number, second_number):
+    return(first_number + second_number)
+def sub(first_number, second_number):
+    return(first_number - second_number)
+def mult(first_number, second_number):
+    return(first_number * second_number)
+def div(first_number, second_number):
+    return(first_number / second_number)
 
-if main.operation == "add":
-    result = main.add(main.first_number, main.second_number)
-elif main.operation == "subtract":
-    result = main.sub(main.first_number, main.second_number)
-elif main.operation == "multiply":
-    result = main.mult(main.first_number, main.second_number)
-elif main.operation == "divide":
-    result = main.div(main.first_number, main.second_number)
-print(f"Result: {result}")
+# Simple Calculator
+print("Welcome to simple calculator.")
+print("I will add/subtract/multiple/divide any two numbers you provide.")
+first_input = input("Enter in first number: ")
+second_input = input("Enter in second number: ")
+operation = input("Would you like to add/subtract/multiple/divide: ")
+
+# explicitly convert string type to float type
+first_number = float(first_input)
+second_number = float(second_input)
+
+if operation == "add":
+    result = first_number + second_number
+    print(f"Result: {result}")
+elif operation == "subtract":
+    result = first_number - second_number
+    print(f"Result: {result}")
+elif operation == "multiply":
+    result = first_number * second_number
+    print(f"Result: {result}")
+elif operation == "divide":
+    result = first_number / second_number
+    print(f"Result: {result}")
+else:
+    print("Sorry, I do not understand your request.")
